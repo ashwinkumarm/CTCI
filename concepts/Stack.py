@@ -17,6 +17,8 @@ class Stack:
         self.items.append(x)
     
     def pop(self):
+        if self.items == []:
+            raise Exception('Empty Stack')
         return self.items.pop()
     
     def peek(self):
