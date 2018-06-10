@@ -5,7 +5,7 @@ Created on 08-Jun-2018
 '''
 class TreeNode:
     
-    def __init__(self, key, value, left, right, parent):
+    def __init__(self, key, value, left = None, right = None, parent = None):
         self.key = key
         self.value = value
         self.left = left
@@ -25,4 +25,15 @@ class TreeNode:
         return self.parent.left == self.left
     
     def isRightChild(self):
-        return self.parent.right == self.right    
+        return self.parent.right == self.right
+    
+    def isRoot(self):
+        return self.parent == None
+    
+    def isLeaf(self):
+        return self.left == None and self.right == None
+    
+    def hasBothChildrens(self):
+        return self.left and self.right
+        
+            
