@@ -30,6 +30,7 @@ def add2LL(ll1, ll2, c):
         c = 0
     
     return resultHead.next
+    
 
 root1 = Node(7,Node(1,Node(6)))
 root2 = Node(5,Node(9,Node(2,Node(2))))
