@@ -3,15 +3,17 @@ from collections import deque
 
 def routeBtwNodes(g, s, e):
     visited , q = set(),deque(s)
+    path = []
     while q:
         node = q.popleft()
+        path.append(node)
         if node == e:
-            return True
+            return ''.join(path)
         if node not in visited:
             visited.add(node)
             for n in g.getOutgoingEdges(node):
                 q.append(n)
-    return False
+    return None
 
 s = "a"
 e = "d"
