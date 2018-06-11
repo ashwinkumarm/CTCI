@@ -4,6 +4,7 @@ Created on 04-Jun-2018
 @author: Ashwin
 '''
 
+
 def rotateMatrix(matrix):
     
     if(len(matrix) != len(matrix[0]) or len(matrix) == 0):
@@ -23,9 +24,10 @@ def rotateMatrix(matrix):
     
     for i in range(len(matrix)):
         for j in range(len(matrix)):
-            print matrix[i][j]
+            print(matrix[i][j])
             
     return True
+
 
 def main():
     matrix = [
@@ -37,5 +39,6 @@ def main():
         ]
     
     rotateMatrix(matrix)
-    
+
+
 main()

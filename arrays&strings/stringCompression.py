@@ -17,9 +17,7 @@ def stringCompression(str1):
             s = 1
             prev = str1[c]
     
-    sb.append(prev)
-    sb.append(str(s))
-    
+    sb.append(prev + str(s))
     fin_str = ''.join(sb)
     
     return fin_str if len(fin_str) < len(str1) else str1
