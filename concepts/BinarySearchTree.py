@@ -87,8 +87,24 @@ class BinarySearchTree:
                 nodeToRemove.right = self._delete(key, node.right)
             else:
                 nodeToRemove = node.left if node.right is None else node.right
-            
-                
+
+    def inOrderTraversal(self):
+        if self:
+            self.inOrderTraversal(self.left)
+            print(self.key)
+            self.inOrderTraversal(self.right)
+
+    def preOrderTraversal(self):
+        if self:
+            print(self.key)
+            self.inOrderTraversal(self.left)
+            self.inOrderTraversal(self.right)
+
+    def postOrderTraversal(self):
+        if self:
+            self.inOrderTraversal(self.left)
+            self.inOrderTraversal(self.right)
+            print(self.key)
                 
         
     

@@ -4,7 +4,7 @@ Created on 09-Jun-2018
 @author: Ashwin
 '''
 
-from CTCI.linkedLists.Node import Node
+from CTCI.concepts.Node import Node
 
 def isPalindrome(ll):
     slow = ll

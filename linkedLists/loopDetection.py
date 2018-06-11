@@ -3,7 +3,7 @@ Created on 10-Jun-2018
 
 @author: Ashwin
 '''
-from CTCI.linkedLists.Node import Node
+from CTCI.concepts.Node import Node
 
 def intersection(ll):
     slow = ll

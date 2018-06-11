@@ -4,7 +4,7 @@ Created on 10-Jun-2018
 @author: Ashwin
 '''
 
-from CTCI.linkedLists.Node import Node
+from CTCI.concepts.Node import Node
 
 def intersection(l1, l2):
     tail1, size1 = getTailAndSize(l1)
