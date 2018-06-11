@@ -3,9 +3,9 @@ Created on 09-Jun-2018
 
 @author: Ashwin
 '''
-from Node import Node
-        
-        
+
+from CTCI.linkedLists.Node import Node
+
 def removeDupsTempBuffer(nodes):
     temp = set()
     prev = None
@@ -43,5 +43,5 @@ removeDupsNoBuffer(root)
 #removeDupsTempBuffer(root)
 
 while root:
-    print root.value,
+    print(root.value, end = "")
     root = root.next

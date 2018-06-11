@@ -4,7 +4,7 @@ Created on 09-Jun-2018
 @author: Ashwin
 '''
 
-from Node import Node
+from CTCI.linkedLists.Node import Node
 
 class Index:
     def __init__(self):
@@ -13,19 +13,20 @@ class Index:
 
 def kthToLastRecursive(head, k):
     index = Index()
-    return kthToLastRecursiveL(head, k,index).value
+    v = 0
+    return kthToLastRecursiveL(head, k)[0].value
     
-def kthToLastRecursiveL(head, k ,index):
+def kthToLastRecursiveL(head, k):
     if head == None:
-        return None
+        return None,0
     
-    node = kthToLastRecursiveL(head.next, k, index)
-    index.value += 1
+    node,v = kthToLastRecursiveL(head.next, k)
+    v += 1
     
-    if index.value == k:
-        return head
+    if v == k:
+        return head,v
     
-    return node
+    return node,v
     
 def length(head):
     c = 0

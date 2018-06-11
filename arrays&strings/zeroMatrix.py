@@ -54,7 +54,7 @@ def main():
     
     for i in range(len(m)):
         for j in range(len(m[0])):
-            print m[i][j]
+            print(m[i][j])
 
 main()
     

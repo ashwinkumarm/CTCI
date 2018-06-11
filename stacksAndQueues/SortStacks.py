@@ -23,7 +23,7 @@ s.push(19)
 sortStack(s)
 
 while not s.isEmpty():
-    print s.pop(),
+    print(s.pop(), end=' ')
 
 
 

@@ -4,7 +4,7 @@ Created on 09-Jun-2018
 @author: Ashwin
 '''
 
-from Node import Node
+from CTCI.linkedLists.Node import Node
 
 def partition(node, x):
     ll1 = Node(-1)
@@ -31,8 +31,8 @@ node3.next = node7 = Node(7)
 node7.next = node1 = Node(1)
 node1.next =  node6 = Node(6)
 
-partitoned = partition(root, 5)
+partitoned = partition(root, 3)
 
 while partitoned:
-    print partitoned.value,
+    print(partitoned.value, end = '')
     partitoned = partitoned.next

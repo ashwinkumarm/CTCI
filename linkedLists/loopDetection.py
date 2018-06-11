@@ -3,7 +3,7 @@ Created on 10-Jun-2018
 
 @author: Ashwin
 '''
-from Node import Node
+from CTCI.linkedLists.Node import Node
 
 def intersection(ll):
     slow = ll
@@ -34,4 +34,3 @@ node2.next = node3
 node3.next = node2
 
 print(intersection(root).value)
-    

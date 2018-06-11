@@ -39,7 +39,7 @@ class AnimalShelter:
 
         if isinstance(item, Dog):
             if self.dog is None:
-                self.dog = self.dogHead= Node(item)
+                self.dog = self.dogHead = Node(item)
             else:
                 self.dog.next = Node(item)
                 self.dog = self.dog.next
