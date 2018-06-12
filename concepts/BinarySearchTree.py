@@ -4,7 +4,7 @@ Created on 08-Jun-2018
 @author: Ashwin
 '''
 
-from TreeNode import TreeNode
+from CTCI.concepts.TreeNode import TreeNode
 
 class BinarySearchTree:
     

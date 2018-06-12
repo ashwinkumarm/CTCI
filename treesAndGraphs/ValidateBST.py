@@ -12,7 +12,7 @@ def _validateBST(root, min, max):
     if (min and root.key < min) or (max and root.key > max):
         return False
 
-    if not _validateBST(root.left, min, root.key) or  not _validateBST(root.right, root.key, max):
+    if not _validateBST(root.left, min, root.key) or not _validateBST(root.right, root.key, max):
         return False
 
     return True

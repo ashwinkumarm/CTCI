@@ -1,7 +1,6 @@
-
 class Trie:
     def __init__(self):
-        self.children ={}
+        self.children = {}
         self.end = False
 
     def allwords(self, prefix):
@@ -43,9 +42,9 @@ trie.insert('bar')
 trie.insert('foob')
 trie.insert('foof')
 
-l = trie.all_suffixes('foo')
+autoComplete = trie.all_suffixes('foo')
 
-for i in l:
+for i in autoComplete:
     print(i, end=" ")
 
 

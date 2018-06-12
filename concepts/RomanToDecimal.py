@@ -16,6 +16,7 @@ def getValue(c):
     else:
         return None
 
+
 def romanToDecimal(roman):
     decimal = 0
     r = 0
@@ -33,7 +34,6 @@ def romanToDecimal(roman):
             decimal += v1
 
     return decimal
-
 
 
 print(romanToDecimal('XXC'))

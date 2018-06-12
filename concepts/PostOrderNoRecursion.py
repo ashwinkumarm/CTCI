@@ -37,7 +37,6 @@ def postOrder1Stacks(root):
 
 def postOrderWithSet(root):
     visited = set()
-    boolVisited = True
     temp = root
     while temp and not (temp in visited):
         if temp.left and temp.left not in visited:
@@ -46,15 +45,8 @@ def postOrderWithSet(root):
             temp = temp.right
         else:
             visited.add(temp)
-            boolVisited = False
             print(temp.key, end=' ')
             temp = root
-
-
-
-
-
-
 
 
 root = TreeNode(5)
