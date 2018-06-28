@@ -40,5 +40,3 @@ print(oneAway('pale','ple'))
 print(oneAway('pales','pale'))
 print(oneAway('pale','bale'))
 print(oneAway('pale','bake'))
-
-    

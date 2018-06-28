@@ -11,4 +11,4 @@ def stringRotation(s1, s2):
     s = s1 + s1
     return s.find(s2) != -1
     
-print(stringRotation('waterbottle', 'erbottherwat'))
+print(stringRotation('waterbottle', 'erbottlewat'))
