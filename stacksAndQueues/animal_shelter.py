@@ -1,31 +1,34 @@
 class Node:
-    def __init__(self, value, next =None):
-        self.value = value
+    def __init__(self, obj, next=None):
+        self.value = obj
         self.next = next
+
 
 class Animal:
     def __init__(self, value):
         self.value = value
         self.priority = 0
 
-    def setPriority(self, priority):
+    def set_priority(self, priority):
         self.priority = priority
 
-    def getPriority(self):
+    def get_priority(self):
         return self.priority
 
     def __str__(self):
         return self.value
 
-    def isOlderThan(self, other):
-        return self.getPriority() >= other.getPriority()
+    def is_older_than(self, other):
+        return self.get_priority() >= other.get_priority()
 
 
 class Dog(Animal):
     pass
 
+
 class Cat(Animal):
     pass
+
 
 class AnimalShelter:
     def __init__(self):
@@ -34,7 +37,7 @@ class AnimalShelter:
         self.priority = 0
 
     def enqueue(self, item):
-        item.setPriority(self.priority)
+        item.set_priority(self.priority)
         self.priority += 1
 
         if isinstance(item, Dog):
@@ -50,26 +53,26 @@ class AnimalShelter:
                 self.cat.next = Node(item)
                 self.cat = self.cat.next
 
-    def dequeueCat(self):
+    def dequeue_cat(self):
         cat = self.catHead
         self.catHead = self.catHead.next
         return cat
 
-    def dequeueDog(self):
+    def dequeue_dog(self):
         dog = self.dogHead
         self.dogHead = self.dogHead.next
         return dog
 
-    def dequeueAny(self):
+    def dequeue_any(self):
         if not self.dogHead:
-            return self.dequeueCat()
+            return self.dequeue_cat()
         elif not self.catHead:
-            return self.dequeueDog()
+            return self.dequeue_dog()
         else:
-            if self.dogHead.value.isOlderThan(self.catHead.value):
-                return self.dequeueCat()
+            if self.dogHead.value.is_older_than(self.catHead.value):
+                return self.dequeue_cat()
             else:
-                return self.dequeueDog()
+                return self.dequeue_dog()
 
 
 a = AnimalShelter()
@@ -77,10 +80,10 @@ a.enqueue(Cat('c1'))
 a.enqueue(Cat('c2'))
 a.enqueue(Cat('c3'))
 a.enqueue(Dog('d1'))
-print(a.dequeueCat().value)
-print(a.dequeueDog().value)
-print(a.dequeueAny().value)
-print(a.dequeueAny().value)
+print(a.dequeue_cat().value)
+print(a.dequeue_dog().value)
+print(a.dequeue_any().value)
+print(a.dequeue_any().value)
 
 
 

@@ -1,27 +1,27 @@
 from CTCI.concepts.Stack import Stack
 
+
 class QueueViaStack:
     def __init__(self):
         self.new = Stack()
         self.old = Stack()
 
-
     def add(self, item):
         self.new.push(item)
 
     def remove(self):
-        self.shiftStacks()
-        if self.old.isEmpty():
+        self.shift_stacks()
+        if self.old.is_empty():
             raise Exception("Stack is Empty")
         return self.old.pop()
 
-    def shiftStacks(self):
-        if self.old.isEmpty():
-            while not self.new.isEmpty():
+    def shift_stacks(self):
+        if self.old.is_empty():
+            while not self.new.is_empty():
                 self.old.push(self.new.pop())
 
     def peek(self):
-        self.shiftStacks()
+        self.shift_stacks()
         return self.old.peek()
 
 

@@ -1,5 +1,6 @@
 import sys
 
+
 class StackMin:
     def __init__(self):
         self.items = []
@@ -19,14 +20,15 @@ class StackMin:
     def peek(self):
         return self.items[len(self.items) - 1]
 
-    def getMin(self):
+    def get_min(self):
         return self.min[-1]
+
 
 stack = StackMin()
 stack.push(0)
 stack.push(1)
 stack.push(0)
-print(stack.getMin())
+print(stack.get_min())
 print(stack.pop())
-print(stack.getMin())
+print(stack.get_min())
 
