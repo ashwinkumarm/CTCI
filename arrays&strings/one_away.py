@@ -4,7 +4,8 @@ Created on 04-Jun-2018
 @author: Ashwin
 '''
 
-def oneAway(str1, str2):
+
+def one_away(str1, str2):
     if len(str2) < len(str1):
         temp = str2
         str2 = str1
@@ -36,7 +37,7 @@ def oneAway(str1, str2):
         
     return c <= 1
 
-print(oneAway('pale','ple'))
-print(oneAway('pales','pale'))
-print(oneAway('pale','bale'))
-print(oneAway('pale','bake'))
+print(one_away('pale','ple'))
+print(one_away('pales','pale'))
+print(one_away('pale','bale'))
+print(one_away('pale','bake'))

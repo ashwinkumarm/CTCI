@@ -6,27 +6,23 @@ Created on 09-Jun-2018
 
 from CTCI.concepts.Node import Node
 
-class Index:
-    def __init__(self):
-        self.value = 0
-        
 
-def kthToLastRecursive(head, k):
-    index = Index()
-    v = 0
-    return kthToLastRecursiveL(head, k)[0].value
+def kth_last_recursive(head, k):
+    return _kth_last_recursive(head, k)[0].value
+
+
+def _kth_last_recursive(head, k):
+    if head is None:
+        return None, 0
     
-def kthToLastRecursiveL(head, k):
-    if head == None:
-        return None,0
-    
-    node,v = kthToLastRecursiveL(head.next, k)
+    node, v = _kth_last_recursive(head.next, k)
     v += 1
     
     if v == k:
-        return head,v
+        return head, v
     
-    return node,v
+    return node, v
+
     
 def length(head):
     c = 0
@@ -35,15 +31,16 @@ def length(head):
         head = head.next
     return c
 
-def kthToLast(head,k):
+def kth_last(head, k):
     l = length(head)
     i = l - k
     while i > 0:
         head = head.next
-        i -=1
+        i -= 1
     return head.value  
 
-def kthToLast2Pointers(head, k):
+
+def kth_last_pointers(head, k):
     pointer1 = head
     pointer2 = head
     while k > 0:
@@ -56,13 +53,14 @@ def kthToLast2Pointers(head, k):
     
     return pointer1.value
 
+
 root = Node(5)
 root.next = node3 = Node(3)
 node3.next = node7 = Node(7)
 node7.next = node1 = Node(1)
 node1.next = node3t = Node(3)
-node3t.next =  node6 = Node(6)
+node3t.next = node6 = Node(6)
 
-print(kthToLastRecursive(root,2))
+print(kth_last_recursive(root, 2))
 #print(kthToLast2Pointers(root,2))
 #print(kthToLast(root,2))

@@ -6,4 +6,16 @@ def changes(amount, coins):
             ways[j] += ways[j - coin]
     return ways[amount]
 
-print(changes(10, [1, 5, 10, 25]))
+
+def coins(amount):
+    if amount < 0:
+        return 0
+
+    if amount == 0:
+        return 1
+
+    return coins(amount - 1) + coins(amount - 5) + coins(amount - 10) + coins(amount - 25)
+
+
+print(changes(6, [1, 5, 10, 25]))
+print(coins(6))

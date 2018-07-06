@@ -1,9 +1,5 @@
-'''
-Created on 10-Jun-2018
-
-@author: Ashwin
-'''
 from CTCI.concepts.Node import Node
+
 
 def intersection(ll):
     slow = ll
@@ -24,7 +20,8 @@ def intersection(ll):
         fast = fast.next
     
     return slow
-    
+
+
 root = Node(1)
 node2 = Node(2)
 node3 = Node(3)

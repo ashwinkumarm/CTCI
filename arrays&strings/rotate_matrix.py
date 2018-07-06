@@ -5,14 +5,14 @@ Created on 04-Jun-2018
 '''
 
 
-def rotateMatrix(matrix):
+def rotate_matrix(matrix):
     
-    if(len(matrix) != len(matrix[0]) or len(matrix) == 0):
+    if len(matrix) != len(matrix[0]) or len(matrix) == 0:
         return False
     
     n = len(matrix)
     
-    for layer in range(n/2):
+    for layer in range(int(n/2)):
         first = layer
         last = n - first - 1
         for i in range(first, last, 1):
@@ -23,8 +23,7 @@ def rotateMatrix(matrix):
             matrix[i][last] = top
     
     for i in range(len(matrix)):
-        for j in range(len(matrix)):
-            print(matrix[i][j])
+        print(matrix[i])
             
     return True
 
@@ -38,7 +37,7 @@ def main():
             [21, 22, 23, 24, 25]
         ]
     
-    rotateMatrix(matrix)
+    rotate_matrix(matrix)
 
 
 main()

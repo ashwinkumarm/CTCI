@@ -6,7 +6,8 @@ Created on 09-Jun-2018
 
 from CTCI.concepts.Node import Node
 
-def removeDupsTempBuffer(nodes):
+
+def remove_dup_temp_buffer(nodes):
     temp = set()
     prev = None
     while nodes:
@@ -17,31 +18,30 @@ def removeDupsTempBuffer(nodes):
             prev.next = nodes.next
         nodes = nodes.next
 
-def removeDupsNoBuffer(nodes):
+
+def remove_dups_no_buffer(nodes):
     while nodes:
-        outervalue = nodes.value
+        outer_value = nodes.value
         inner = nodes.next
         prev = None
         while inner:
-            if inner.value == outervalue:
+            if inner.value == outer_value:
                 prev.next = inner.next
             prev = inner
             inner = inner.next
         nodes = nodes.next
                 
-                
-        
 
 root = Node(5)
 root.next = node3 = Node(3)
 node3.next = node7 = Node(7)
 node7.next = node1 = Node(1)
 node1.next = node3t = Node(3)
-node3t.next =  node6 = Node(6)
+node3t.next = node6 = Node(6)
 
-removeDupsNoBuffer(root)
+remove_dups_no_buffer(root)
 #removeDupsTempBuffer(root)
 
 while root:
-    print(root.value, end = "")
+    print(root.value, end="")
     root = root.next

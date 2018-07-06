@@ -4,8 +4,8 @@ Created on 04-Jun-2018
 @author: Ashwin
 '''
 
-def stringCompression(str1):
-    
+
+def string_compression(str1):
     prev = str1[0]
     s = 1
     sb = []
@@ -19,9 +19,8 @@ def stringCompression(str1):
     
     sb.append(prev + str(s))
     fin_str = ''.join(sb)
-    
     return fin_str if len(fin_str) < len(str1) else str1
 
 
-print(stringCompression('aabcccccaaa'))
-print(stringCompression('abcswf'))   
+print(string_compression("aabcccccaaa"))
+print(string_compression("abcswf"))

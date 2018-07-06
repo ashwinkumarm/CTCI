@@ -1,17 +1,12 @@
-'''
-Created on 09-Jun-2018
-
-@author: Ashwin
-'''
-
 from CTCI.concepts.Node import Node
+
 
 def partition(node, x):
     ll1 = Node(-1)
     ll2 = Node(-1)
     
-    ll1Head = ll1
-    ll2Head = ll2
+    ll1_head = ll1
+    ll2_head = ll2
     while node:
         if node.value < x:
             ll1.next = Node(node.value)
@@ -21,18 +16,18 @@ def partition(node, x):
             ll2 = ll2.next
         node = node.next
     
-    ll1.next = ll2Head.next
+    ll1.next = ll2_head.next
     
-    return ll1Head.next
+    return ll1_head.next
+
 
 root = Node(5)
 root.next = node3 = Node(3)
 node3.next = node7 = Node(7)
 node7.next = node1 = Node(1)
-node1.next =  node6 = Node(6)
+node1.next = node6 = Node(6)
+p = partition(root, 3)
 
-partitoned = partition(root, 3)
-
-while partitoned:
-    print(partitoned.value, end = '')
-    partitoned = partitoned.next
+while p:
+    print(p.value, end='')
+    p = p.next

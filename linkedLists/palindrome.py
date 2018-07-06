@@ -1,12 +1,7 @@
-'''
-Created on 09-Jun-2018
-
-@author: Ashwin
-'''
-
 from CTCI.concepts.Node import Node
 
-def isPalindrome(ll):
+
+def is_palindrome(ll):
     slow = ll
     fast = ll
     stack = []
@@ -24,6 +19,6 @@ def isPalindrome(ll):
         slow = slow.next
     return True
 
-root = Node(6,Node(1,Node(6)))
 
-print(isPalindrome(root))
+root = Node(6,Node(1,Node(6)))
+print(is_palindrome(root))
