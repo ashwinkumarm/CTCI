@@ -8,17 +8,19 @@ def triple_step(n):
 
 
 def triple_step_bottomup(n):
-    count_steps = [0 for i in range(n)]
+    count_steps = [0 for i in range(n+1)]
     count_steps[0] = 1
-    count_steps[1] = 2
-    count_steps[2] = 4
+    count_steps[1] = 1
+    count_steps[2] = 2
 
     i = 3
-    while i < n:
+    while i <= n:
         count_steps[i] = count_steps[i-1] + count_steps[i-2] + count_steps[i-3]
         i += 1
 
-    return count_steps[n-1]
+    return count_steps[n]
 
 
-print(triple_step_bottomup(8))
+for i in range(3, 13):
+    print(triple_step(i))
+    print(triple_step_bottomup(i))
