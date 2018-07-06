@@ -3,7 +3,7 @@ from CTCI.concepts.TreeNode import TreeNode
 def listOfDepths(root):
     result = []
     current = []
-    if root != None:
+    if root is not None:
         current.append(root)
 
     while len(current) > 0:
@@ -17,7 +17,6 @@ def listOfDepths(root):
                 current.append(p.right)
 
     return result
-
 
 
 root = TreeNode(5)
