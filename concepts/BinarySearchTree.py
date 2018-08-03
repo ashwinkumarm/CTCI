@@ -123,4 +123,3 @@ if 10 in bstTree:
     print('10')
 if 20 in bstTree:
     print('20')
-    

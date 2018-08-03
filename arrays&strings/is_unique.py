@@ -4,6 +4,21 @@ Created on 04-Jun-2018
 @author: Ashwin
 '''
 
+
+# with additional data structure
+def is_unique_set(str):
+    if len(str) > 128:
+        return False
+
+    s = set()
+    for c in str:
+        if c not in s:
+            s.add(c)
+        else:
+            return False
+    return True
+
+
 # with additional data structure
 def isUnique(str):
     if len(str) > 128:
@@ -32,5 +47,6 @@ def isUniqueWithoutAddDataStructure(str):
     return True
 
 
-print(isUnique('ashwina'))    
-print(isUniqueWithoutAddDataStructure('ashwin'))
+# print(isUnique('ashwina'))
+# print(isUniqueWithoutAddDataStructure('ashwin'))
+print(is_unique_set("ashwina"))

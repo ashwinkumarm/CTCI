@@ -1,6 +1,5 @@
 '''
 Created on 04-Jun-2018
-
 @author: Ashwin
 '''
 
@@ -11,7 +10,7 @@ def string_compression(str1):
     sb = []
     for c in range(1, len(str1)):
         if prev == str1[c]:
-            s +=1
+            s += 1
         else:
             sb.append(prev + str(s))
             s = 1

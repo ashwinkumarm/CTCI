@@ -24,12 +24,12 @@ def pal_perm(str):
     return True
 
 
-#To consider upper case and lower case as same alphabets
+# To consider upper case and lower case as same alphabets
 def char_num(c):
-    if c >= 'a' and 'z' >= c:
+    if 'z' >= c >= 'a':
         return ord(c) - ord('a')
     
-    elif c >= 'A' and 'Z' >= c:
+    elif 'Z' >= c >= 'A':
         return ord(c) - ord('A')
     
     return -1

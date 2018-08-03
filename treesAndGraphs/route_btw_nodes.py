@@ -1,8 +1,9 @@
 from CTCI.concepts.DirectedGraph import DirectedGraph
 from collections import deque
 
+
 def routeBtwNodes(g, s, e):
-    visited , q = set(),deque(s)
+    visited, q = set(), deque(s)
     path = []
     while q:
         node = q.popleft()

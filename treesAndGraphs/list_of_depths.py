@@ -1,6 +1,7 @@
 from CTCI.concepts.TreeNode import TreeNode
 
-def listOfDepths(root):
+
+def list_of_depths(root):
     result = []
     current = []
     if root is not None:
@@ -28,7 +29,7 @@ Node8.left = Node12 = TreeNode(12)
 Node8.right = Node14 = TreeNode(14)
 Node9.left = Node15 = TreeNode(15)
 
-lDepths = listOfDepths(root)
+lDepths = list_of_depths(root)
 for l in lDepths:
     for ll in l:
         print(ll.key, end = " ")

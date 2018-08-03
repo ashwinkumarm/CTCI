@@ -22,6 +22,3 @@ sort_stack(s)
 
 while not s.is_empty():
     print(s.pop(), end=' ')
-
-
-
