@@ -7,19 +7,19 @@ class Node:
         self.oe = set()
         self.ie = set()
 
-    def addOutgoingEdges(self, e):
+    def add_outgoing_edges(self, e):
         self.oe.add(e)
 
-    def addIncomingEdges(self, e):
+    def add_incoming_edges(self, e):
         self.ie.add(e)
 
-    def no_of_incomingedges(self):
+    def no_of_incoming_edges(self):
         return len(self.ie)
 
     def get_outgoing_edges(self):
         return self.oe
 
-    def remove_incomingEdge(self, e):
+    def remove_incoming_edge(self, e):
         self.ie.remove(e)
 
 
@@ -31,29 +31,29 @@ def build_order(projects, dependencies):
     for d in dependencies:
         p = dict[d[0]]
         c = dict[d[1]]
-        p.addOutgoingEdges(c)
-        c.addIncomingEdges(p)
+        p.add_outgoing_edges(c)
+        c.add_incoming_edges(p)
 
-    buildorder = []
+    b_order = []
     q = deque()
 
     for p in projects:
-        if dict[p].no_of_incomingedges() == 0:
+        if dict[p].no_of_incoming_edges() == 0:
             q.append(dict[p])
 
     while q:
         n = q.popleft()
-        buildorder.append(n.val)
+        b_order.append(n.val)
         for oe in n.get_outgoing_edges():
-            dict[oe.val].remove_incomingEdge(n)
-            if dict[oe.val].no_of_incomingedges() == 0:
+            dict[oe.val].remove_incoming_edge(n)
+            if dict[oe.val].no_of_incoming_edges() == 0:
                 q.append(dict[oe.val])
 
-        if len(buildorder) > len(projects):
+        if len(b_order) > len(projects):
             raise Exception
 
+    return b_order
 
-    return buildorder
 
 projects = ["A", "B", "C", "D", "E", "F"]
 dependencies = [("A", "D"), ("F", "B"), ("B", "D"), ("F", "A"), ("D", "C")]

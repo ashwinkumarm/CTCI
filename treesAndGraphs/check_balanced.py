@@ -1,22 +1,22 @@
-
 from CTCI.concepts.TreeNode import TreeNode
 
-def isBalanced(root):
+
+def is_balanced(root):
     if not root:
         return True, 0
 
-    isB, dL = isBalanced(root.left)
-    if not isB:
+    is_b, d_l = is_balanced(root.left)
+    if not is_b:
         return False, None
 
-    isB, dR = isBalanced(root.right)
-    if not isB:
+    is_b, d_r = is_balanced(root.right)
+    if not is_b:
         return False, None
 
-    if abs(dL - dR) > 1:
+    if abs(d_l - d_r) > 1:
         return False, None
     else:
-        return True, max(dL, dR) + 1
+        return True, max(d_l, d_r) + 1
 
 
 root = TreeNode(5)
@@ -29,4 +29,4 @@ Node8.right = Node14 = TreeNode(14)
 Node9.left = Node15 = TreeNode(15)
 Node15.left = Node16 = TreeNode(16)
 
-print(isBalanced(root))
+print(is_balanced(root))

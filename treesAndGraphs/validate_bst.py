@@ -1,18 +1,18 @@
 from CTCI.concepts.TreeNode import TreeNode
 
 
-def validateBST(root):
-    return _validateBST(root, None, None)
+def validate_bst(root):
+    return _validate_bst(root, None, None)
 
 
-def _validateBST(root, min, max):
+def _validate_bst(root, min, max):
     if root is None:
         return True
 
     if (min and root.key < min) or (max and root.key > max):
         return False
 
-    if not _validateBST(root.left, min, root.key) or not _validateBST(root.right, root.key, max):
+    if not _validate_bst(root.left, min, root.key) or not _validate_bst(root.right, root.key, max):
         return False
 
     return True
@@ -28,4 +28,4 @@ Node8.right = Node14 = TreeNode(14)
 Node9.left = Node15 = TreeNode(4)
 
 
-print(validateBST(root))
+print(validate_bst(root))

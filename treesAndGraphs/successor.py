@@ -3,7 +3,7 @@ def successor(n):
         return None
 
     if n.right:
-        return leftMost(n.right)
+        return left_most(n.right)
     else:
         x = n
         p = x.parent
@@ -13,7 +13,8 @@ def successor(n):
 
         return p
 
-def leftMost(n):
+
+def left_most(n):
     if n is None:
         return None
 
