@@ -1,6 +1,7 @@
 def magic_index(sd_list):
     return _magic_index_nd(sd_list, 0, len(sd_list)-1)
 
+
 def _magic_index(sd_list, s, e):
     if s > e:
         return -1

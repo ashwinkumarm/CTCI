@@ -1,5 +1,6 @@
 from copy import deepcopy
 
+
 def parens(n):
     res = []
     cr = [None for i in range(2 * n)]

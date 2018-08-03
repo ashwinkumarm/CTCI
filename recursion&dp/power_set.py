@@ -11,3 +11,5 @@ s.add(2)
 s.add(3)
 s.add(4)
 print(power_set(s))
+
+#print([1] + [2])

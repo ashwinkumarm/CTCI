@@ -19,5 +19,5 @@ def group_anagrams_map(strs):
     return res
 
 
-strs = ["ash", "hsa", "win", "kum", "ar"]
+strs = ["ash",  "win", "hsa", "kum", "ar"]
 print(group_anagrams_map(strs))
